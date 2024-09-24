@@ -1,0 +1,24 @@
+version: '3.4'
+
+services:
+  dockerclass:
+    depends_on:
+      - database
+    image: dockerclass
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 5000:5000
+
+  database: 
+    image: mongo:6
+    ports: 
+      - 27017:27017
+    volumes:
+      - mongo-data:/App/db.js
+
+volumes:
+  mongo-data:

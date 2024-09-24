@@ -1,0 +1,15 @@
+{
+  "name": "dockerclass",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+     "start": "node App/server.js"
+    
+  },
+  "author": "fasas",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
